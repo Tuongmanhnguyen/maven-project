@@ -13,7 +13,8 @@ pipeline
     stage('build')
     {
       steps {
-        sh 'mvn clean package'
+        //sh 'mvn clean package'
+        sh 'mvn clean package -Dmaven.compiler.source=17 -Dmaven.compiler.target=17'
       }
 
       post{
